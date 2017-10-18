@@ -3,8 +3,6 @@ var warningbg = '#E59720';
 var criticalbg = '#F9265E';
 var unknownbg = '#8C81FF';
 
-
-
 $(document).ready(function(){
     
 //--------------AVAILABLE NODES---------------//	
@@ -67,7 +65,7 @@ $(document).ready(function(){
 	    highDpiSupport: true
 	};
     
-	oCaeAdm1CheckAvailableNodesColorGm = new Gauge($("#cae_adm1-check-available-nodes-color-canvas")[0]).setOptions(oCaeAdm1CheckAvailableNodesOpts);
+	oCaeAdm1CheckAvailableNodesColorGm = new Gauge($("#cae_adm1-check-available-nodes-color-canvas")[0]).setOptions(oCaeAdm1CheckAvailableNodesColorOpts);
 	oCaeAdm1CheckAvailableNodesColorGm.setTextField($("#cae_adm1-check-available-nodes-color-div")[0]);
 	oCaeAdm1CheckAvailableNodesColorGm.maxValue = 60;
 	oCaeAdm1CheckAvailableNodesColorGm.minValue = 0;
@@ -139,8 +137,39 @@ $(document).ready(function(){
 
 function updateGm(){
 	oCaeAdm1CheckAvailableNodesGm.set(Math.floor(Math.random()*60)+1);
+    oCaeAdm1CheckAvailableNodesColorGm.set(Math.floor(Math.random()*60)+1);
+    debugger;
+    $("#cae_adm1-check-available-nodes-color-div").change();
 	oCaeNas1CheckHome15UsageGm.set(Math.floor(Math.random()*100)+1);
 	oCaeNas1CheckHome15AwaitingTimeGm.set(Math.floor(Math.random()*10)+1);
 }
 
 setInterval(function(){updateGm();}, 3000);
+
+function test(canvas){
+    var opts={
+        colorStart:"#F03E3E",
+        colorStop:"#F03E3E"
+    }
+    oCaeAdm1CheckAvailableNodesColorGm.setOptions(opts);
+//    oCaeAdm1CheckAvailableNodesColorGm.setColorStart("#F03E3E");
+}
+
+$("#cae_adm1-check-available-nodes-color-div").change(function(){
+	debugger;   
+    console.log("dxfasdgdf");
+//    var iVal=$(this).text();
+//    var _color;
+//    
+//    if(iVal<=5) _color="#DE0000";
+//    else if (iVal<=10) _color="#FF9F26";
+//    else _color="#A6E22E";
+//    
+//    var oOpts={
+//        colorStart: _color,
+//        colorStop: _color
+//    }
+    
+    oCaeAdm1CheckAvailableNodesColorGm.setOptions(oOpts);
+})
+

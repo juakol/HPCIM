@@ -6,7 +6,7 @@
 		<title>HPC Interface Monitoring</title>
 		<link href="images/favicon.ico" rel="shorcut icon" type="image/x-icon" />
 		<link rel="stylesheet" type="text/css" href="css/customchecks.css" />
-		<script type="text/javascript" src="lib/jquery-3.1.0.min.js"></script>
+		<script type="text/javascript" src="lib/jquery-3.2.1.js"></script>
 		<script type="text/javascript" src="lib/gauge.js"></script>
 		<script type="text/javascript" src="js/gauge-meters-v2.js"></script>
 	</head>
@@ -39,7 +39,7 @@
                     <tr>
                         <td>
                             <div style="height:250px">
-                                <canvas class="gauge" id="cae_adm1-check-available-nodes-color-canvas"></canvas>
+                                <canvas onclick="test(this)" class="gauge" id="cae_adm1-check-available-nodes-color-canvas"></canvas>
                                 <div class="value" id="cae_adm1-check-available-nodes-color-div"></div>
                             </div>
                         </td>
