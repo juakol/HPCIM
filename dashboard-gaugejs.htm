@@ -1,0 +1,59 @@
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+		<title>HPC Interface Monitoring</title>
+		<link href="images/favicon.ico" rel="shorcut icon" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="css/gm.css" />
+		<script type="text/javascript" src="lib/jquery-3.2.1.js"></script>
+		<script type="text/javascript" src="lib/gauge.js"></script>
+		<script type="text/javascript" src="js/gm-gaugejs.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div style="float: left">
+				<table>
+                    <tr>
+                        <td>
+                            <div class="label">
+                                Available nodes
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div style="height:270px">
+                          	    <canvas class="gauge" id="cae_adm1-check-available-nodes-canvas"></canvas>
+                                <div class="value" id="cae_adm1-check-available-nodes-div"></div>
+                            </div>
+                        </td>
+                    </tr>
+				</table>
+			</div>
+			<div style="float: right;">
+				<table>
+					<tr>
+						<td colspan="2">
+							<div class="label">
+								home15 performance
+							</div>
+						</td>
+					</tr>
+					<tr >
+						<td>
+							<div style="height: 270px;">
+								<canvas class="gauge" id="cae_nas1-check-home15-usage-canvas"></canvas>
+								<div class="value" id="cae_nas1-check-home15-usage-div"></div>
+							</div>
+						</td>
+						<td>
+							<div style="height: 270px;">
+								<canvas class="gauge" id="cae_nas1-check-home15-awaiting-time-canvas"></canvas>
+								<div class="value" id="cae_nas1-check-home15-awaiting-time-div"></div>
+							</div>
+						</td>
+                    </tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
